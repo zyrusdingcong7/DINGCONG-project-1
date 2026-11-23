@@ -1085,8 +1085,11 @@ footer p {
 }
 
 @supports (animation-timeline: view()) {
+  .hero-copy,
+  .hero-visual,
   .section-heading,
   .project-card,
+  .about-label,
   .about-copy,
   .contact {
     animation: reveal-on-scroll linear both;
@@ -1119,6 +1122,9 @@ footer p {
 
   .section-heading,
   .project-card,
+  .hero-copy,
+  .hero-visual,
+  .about-label,
   .about-copy,
   .contact {
     animation: none !important;
