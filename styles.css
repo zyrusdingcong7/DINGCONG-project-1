@@ -289,108 +289,14 @@ a {
   filter: blur(2px);
 }
 
-.portrait {
-  position: absolute;
-  left: 50%;
-  bottom: -20px;
-  width: 300px;
-  height: 470px;
-  transform: translateX(-50%);
-}
-
-.portrait-face {
-  position: absolute;
-  z-index: 3;
-  width: 178px;
-  height: 218px;
-  left: 61px;
-  top: 78px;
-  border-radius: 48% 48% 46% 46%;
-  background: #bb8062;
-  box-shadow: inset -20px -10px 0 rgba(119, 72, 52, 0.09);
-}
-
-.portrait-hair {
-  position: absolute;
-  z-index: 5;
-  width: 194px;
-  height: 128px;
-  left: 54px;
-  top: 44px;
-  border-radius: 92px 92px 44px 34px;
-  background: #25262a;
-  clip-path: polygon(5% 80%, 0 20%, 18% 4%, 46% 0, 72% 8%, 94% 30%, 100% 72%, 86% 54%, 75% 28%, 58% 20%, 42% 25%, 24% 40%, 18% 80%);
-}
-
-.portrait-neck {
+.profile-photo {
   position: absolute;
   z-index: 2;
-  width: 82px;
-  height: 116px;
-  left: 109px;
-  top: 252px;
-  background: #a86e52;
-}
-
-.portrait-shirt {
-  position: absolute;
-  z-index: 1;
-  width: 270px;
-  height: 230px;
-  left: 15px;
-  bottom: 0;
-  border-radius: 48% 48% 10px 10px;
-  background: #f1bca3;
-  clip-path: polygon(18% 22%, 42% 5%, 58% 5%, 82% 22%, 100% 100%, 0 100%);
-}
-
-.brow,
-.eye,
-.nose,
-.mouth {
-  position: absolute;
-  z-index: 7;
-}
-
-.brow {
-  width: 36px;
-  height: 6px;
-  top: 72px;
-  border-radius: 50%;
-  border-top: 4px solid #3d2b25;
-}
-
-.brow-left { left: 29px; transform: rotate(-4deg); }
-.brow-right { right: 29px; transform: rotate(4deg); }
-
-.eye {
-  width: 7px;
-  height: 7px;
-  top: 88px;
-  border-radius: 50%;
-  background: #302821;
-}
-
-.eye-left { left: 43px; }
-.eye-right { right: 43px; }
-
-.nose {
-  width: 15px;
-  height: 36px;
-  left: 82px;
-  top: 92px;
-  border-radius: 50%;
-  border-right: 2px solid rgba(95, 52, 39, 0.35);
-  border-bottom: 2px solid rgba(95, 52, 39, 0.3);
-}
-
-.mouth {
-  width: 48px;
-  height: 18px;
-  left: 65px;
-  top: 155px;
-  border-bottom: 3px solid #713f36;
-  border-radius: 50%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 52%;
 }
 
 .status-card {
