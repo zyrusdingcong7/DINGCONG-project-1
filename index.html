@@ -31,6 +31,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    <input class="theme-toggle" type="checkbox" id="theme-toggle" />
     <div class="page-shell">
       <header class="nav-wrap">
         <nav class="navbar" aria-label="Main navigation">
@@ -52,7 +53,12 @@
             <a href="#contact">Contact</a>
           </div>
 
-          <a class="nav-button" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+          <div class="nav-actions">
+            <a class="nav-button" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+            <label class="theme-toggle-label" for="theme-toggle" aria-label="Toggle dark mode">
+              <span class="theme-icon" aria-hidden="true">☾</span>
+            </label>
+          </div>
         </nav>
       </header>
 

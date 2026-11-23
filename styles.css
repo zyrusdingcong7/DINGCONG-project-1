@@ -26,6 +26,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body:has(.theme-toggle:checked) {
+  --ink: #f0f0eb;
+  --muted: #b6b8b2;
+  --cream: #252729;
+  --paper: #1b1d1f;
+  --lime: #d9f06b;
+  --line: #393c3f;
+  background: #121416;
+}
+
+.theme-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -51,7 +70,12 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 main:focus-visible {
-  outline: 3px solid #6b7f16;
+  outline: 3px solid var(--lime);
+  outline-offset: 4px;
+}
+
+body:has(.theme-toggle:focus-visible) .theme-toggle-label {
+  outline: 3px solid var(--lime);
   outline-offset: 4px;
 }
 
@@ -150,7 +174,43 @@ main:focus-visible {
 
 .nav-button:hover {
   background: var(--ink);
-  color: white;
+  color: var(--paper);
+}
+
+.nav-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-label {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.theme-toggle-label:hover {
+  background: var(--cream);
+}
+
+.theme-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.theme-toggle:checked ~ .page-shell .theme-icon {
+  font-size: 0;
+}
+
+.theme-toggle:checked ~ .page-shell .theme-icon::before {
+  content: "☀";
+  font-size: 19px;
 }
 
 .nav-toggle,
@@ -778,7 +838,7 @@ footer p {
 
 @media (max-width: 980px) {
   .navbar {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
   }
 
   .nav-toggle-label {
@@ -840,7 +900,7 @@ footer p {
     display: flex;
   }
 
-  .nav-button {
+  .nav-actions .nav-button {
     display: none;
   }
 
